@@ -58,7 +58,7 @@
 					<a href="#map" class="header-menu__link j-anchor-link">Road map</a>
 				</li>
 				<li>
-					<a href="" class="login-link">Log in</a>
+					<a href="http://app.surrus.io/?login" class="login-link">Log in</a>
 				</li>
 			</ul>
 			<div class="header__right">
@@ -1471,6 +1471,63 @@
 		$(".open-language").click(function () {
 			$(".lang-list").appendTo(".open-language");
 		});
+
+		var cookies = {
+			setCookie: function (name, value, options) {
+				options = options || {};
+
+				var expires = options.expires;
+
+				if (typeof expires == "number" && expires) {
+					var d = new Date();
+					d.setTime(d.getTime() + expires * 1000);
+					expires = options.expires = d;
+				}
+				if (expires && expires.toUTCString) {
+					options.expires = expires.toUTCString();
+				}
+
+				value = encodeURIComponent(value);
+
+				var updatedCookie = name + "=" + value;
+
+				for (var propName in options) {
+					updatedCookie += "; " + propName;
+					var propValue = options[propName];
+					if (propValue !== true) {
+						updatedCookie += "=" + propValue;
+					}
+				}
+
+				document.cookie = updatedCookie;
+			},
+			getCookie: function (name) {
+				var matches = document.cookie.match(
+					new RegExp(
+						"(?:^|; )" +
+						name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+						"=([^;]*)"
+					)
+				);
+				return matches ? decodeURIComponent(matches[1]) : undefined;
+			}
+		}
+
+		if (document.location.search) {
+			cookies.setCookie("ref", document.location.search.slice(1), {
+				expires: 3600 * 24 * 7
+			})
+		}
+
+		var ref = cookies.getCookie("ref") || document.location.search.slice(1);
+
+		var loginLink = $(".login-link").attr("href");
+		var registerLink = $(".buy-token").attr("href");
+
+		if (ref) {
+			$(".login-link").attr("href", loginLink + "&" + ref);
+			$(".buy-token").attr("href", registerLink + "&" + ref);
+		}
 	</script>
 
 

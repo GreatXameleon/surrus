@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
-		w[l] = w[l] || []; w[l].push({
-			'gtm.start':
-				new Date().getTime(), event: 'gtm.js'
-		}); var f = d.getElementsByTagName(s)[0],
-			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-5BGK435');</script>
 	<!-- End Google Tag Manager -->
 	<!-- <meta http-equiv="refresh" content="0; URL='https://surrus.io/'" /> -->
@@ -57,7 +57,7 @@
 					<a href="#map" class="header-menu__link j-anchor-link">Дорожная карта</a>
 				</li>
 				<li>
-					<a href="" class="login-link">Войти</a>
+					<a href="http://app.surrus.io/?login" class="login-link">Войти</a>
 				</li>
 			</ul>
 			<div class="header__right">
@@ -428,7 +428,7 @@
 									<p class="title-goal">Ответственность и риски распределяются между всеми участниками страхования.</p>
 									<div class="hidden-text">
 										<p class="goal-hidden hidden">Тарифы создаются таким образом, чтобы общая сумма страховых премий была больше, чем сумма выплат по страховым случаям.
-											</p>
+										</p>
 										<p class="goal-hidden hidden">То есть, владельцы автомобилей, по которым не произошло страхового случая, покрывают расходы компании на страховые
 											случаи. Из-за этого тарифы высоки и составляют до 10% от стоимости авто в год.</p>
 									</div>
@@ -975,8 +975,7 @@
 								<a href="https://www.facebook.com/profile.php?id=100003139836853" target="_blank"></a>
 							</div>
 							<div class="social-network linkedin">
-								<a href="https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%B6%D1%83%D0%BA%D0%BE%D0%B2-073a55158"
-								 target="_blank"></a>
+								<a href="https://www.linkedin.com/in/%D0%B0%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%B6%D1%83%D0%BA%D0%BE%D0%B2-073a55158" target="_blank"></a>
 							</div>
 						</div>
 					</div>
@@ -1375,8 +1374,7 @@
 				<input type="checkbox" required>
 				<span class="agree">нажав на поле “Я принимаю эти условия”, вы соглашаетесь с нашими условиями продажи токенов, и вы прямо подтверждаете,
 					что внимательно прочитали и поняли содержание этого документа.
-					<a href="http://surrus.io/ru/SurruS_offer.pdf" class="agreement"
-					 target="_blank">Договор публичной оферты</a>
+					<a href="http://surrus.io/ru/SurruS_offer.pdf" class="agreement" target="_blank">Договор публичной оферты</a>
 				</span>
 			</div>
 			<input type="submit" value="Купить токены">
@@ -1393,8 +1391,7 @@
 				<input type="checkbox" required>
 				<span class="agree">нажав на поле “Я принимаю эти условия”, вы соглашаетесь с нашими условиями продажи токенов, и вы прямо подтверждаете,
 					что внимательно прочитали и поняли содержание этого документа.
-					<a href="http://surrus.io/ru/SurruS_offer.pdf" class="agreement"
-					 target="_blank">Договор публичной оферты</a>
+					<a href="http://surrus.io/ru/SurruS_offer.pdf" class="agreement" target="_blank">Договор публичной оферты</a>
 				</span>
 			</div>
 			<input type="submit" value="Заказать">
@@ -1466,6 +1463,62 @@
 			$(this).toggleClass('clicked');
 		})
 
+		var cookies = {
+			setCookie: function (name, value, options) {
+				options = options || {};
+
+				var expires = options.expires;
+
+				if (typeof expires == "number" && expires) {
+					var d = new Date();
+					d.setTime(d.getTime() + expires * 1000);
+					expires = options.expires = d;
+				}
+				if (expires && expires.toUTCString) {
+					options.expires = expires.toUTCString();
+				}
+
+				value = encodeURIComponent(value);
+
+				var updatedCookie = name + "=" + value;
+
+				for (var propName in options) {
+					updatedCookie += "; " + propName;
+					var propValue = options[propName];
+					if (propValue !== true) {
+						updatedCookie += "=" + propValue;
+					}
+				}
+
+				document.cookie = updatedCookie;
+			},
+			getCookie: function (name) {
+				var matches = document.cookie.match(
+					new RegExp(
+						"(?:^|; )" +
+						name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+						"=([^;]*)"
+					)
+				);
+				return matches ? decodeURIComponent(matches[1]) : undefined;
+			}
+		}
+
+		if (document.location.search) {
+			cookies.setCookie("ref", document.location.search.slice(1), {
+				expires: 3600 * 24 * 7
+			})
+		}
+
+		var ref = cookies.getCookie("ref") || document.location.search.slice(1);
+
+		var loginLink = $(".login-link").attr("href");
+		var registerLink = $(".buy-token").attr("href");
+
+		if (ref) {
+			$(".login-link").attr("href", loginLink + "&" + ref);
+			$(".buy-token").attr("href", registerLink + "&" + ref);
+		}
 	</script>
 
 
