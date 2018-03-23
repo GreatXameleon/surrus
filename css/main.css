@@ -2096,6 +2096,7 @@ form{
   font-family: "helveticaneyecyrroman", sans-serif;
   margin-left: 10px;
 }
+
 .block12-srs .block12__inBlock{
   margin-left: 50px;
 }
@@ -2182,7 +2183,13 @@ form{
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+}
+.block12__line .block12__inBlock p {
+  margin-bottom: 0;
+}
+.block12__line .block12__inBlock:last-child p {
+  margin: 0 20px 0 20px;
 }
 .token-srs-description {
   width: 60%;
