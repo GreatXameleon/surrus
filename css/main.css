@@ -2298,10 +2298,6 @@ form{
   height: 35px;
 }
 
-.name {
-  white-space: nowrap;
-}
-
 .block14 {
   padding-top: 25px;
 }
@@ -2377,6 +2373,7 @@ form{
   font-size: 24px;
   font-weight: 600;
   line-height: 54px;
+  white-space: nowrap;
 }
 .block4-item__wrapper .about {
   position: relative;
