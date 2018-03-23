@@ -578,6 +578,7 @@ form{
 .socials{
   position: relative;
   bottom: 100px;
+  max-width: 350px;
 }
 .socials-list {
   font-size: 0;
