@@ -2531,6 +2531,9 @@ form{
   background-color: rgba(37,8, 91, 0.4);
   border-radius: 14px;
 }
+.block17 form .submit-mobile {
+  display: none;
+}
 .block-link{
   display: flex;
   justify-content: center;
@@ -3037,15 +3040,20 @@ a.main-website:hover {
     flex-basis: 100%;
   }
   .block17 .color2{
-    order: 2;
+    order: 3;
     flex-basis: 100%;
   }
   .block17 form{
-    order: 3;
+    order: 2;
     flex-basis: 100%;
   }
   .block-link{
     flex-wrap: wrap;
+  }
+  .block-link .colored-link {
+    max-width: 40vw;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
   }
   .block17.colored-link.color1{
     margin-bottom: 0;
@@ -3654,6 +3662,19 @@ a.main-website:hover {
   .block17 .color2{
     order: 3;
   }
+  .block17 input[type="email"]{
+    width: 80vw;
+  }
+  .block17 input[type="submit"]{
+    position: absolute;
+    width: 80px;
+    right: 7.5vw;
+  }
+  .block-link .colored-link {
+    max-width: 80vw;
+    margin-top: 20px;
+    margin-bottom: 20px !important;
+  }
   footer{
     display: none;
   }
@@ -3708,7 +3729,30 @@ a.main-website:hover {
     bottom: -64px;
     right: 0;
   }
+  .block17 form {
+    height: 200px;
+    line-height: 23px;
+  }
+  .block17 form .submit-main {
+    display: none;
+  }
+  .block17 form .submit-mobile {
+    display: block;
+    position: absolute;
+    font-size: 22px;
+    bottom: 30px;
+    width: 50px;
+  }
 }
+
+/* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 479px) {
+  .block17 form .submit-mobile {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    width: 50px;
+  }
+} */
 
 
 
