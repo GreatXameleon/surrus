@@ -3250,7 +3250,7 @@ a.main-website:hover {
   .block2_left__about span {
     font-size: 18px;
   }
-  .block2_left__about span:first-child {
+  .block2_left__about span:first-of-type {
     display: block;
   }
   .block14 .block-title{
@@ -3306,6 +3306,12 @@ a.main-website:hover {
   .graphics{
     flex-direction: column;
   }
+  .graphics .title{
+    position: relative;
+    text-align: left;
+    left: 28%;
+    top: -15px;
+  }
   .graphics__item{
     width: 100%;
     padding-left: 10%;
@@ -3326,15 +3332,11 @@ a.main-website:hover {
   }
   .graphics__body{
     height: auto;
-
   }
   .graphics-list{
     position: static;
     flex-direction: column;
     align-items: center;
-  }
-  .graphics .title{
-    width: 100%;
   }
   .graphics__left .graphics__body{
     background: url(../images/pattern1-mob.png) left bottom no-repeat;
@@ -3650,6 +3652,9 @@ a.main-website:hover {
 @media screen and (max-width: 479px){
   .graphics__left .graphics__body, .graphics__right .graphics__body{
     width: 100%;
+  }
+  .graphics .title{
+    left: 12%;
   }
   .advantages__item{
     padding: 0;
