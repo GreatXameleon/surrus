@@ -2284,6 +2284,10 @@ form{
   height: 35px;
 }
 
+.name {
+  white-space: nowrap;
+}
+
 .block14 {
   padding-top: 25px;
 }
