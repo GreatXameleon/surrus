@@ -2131,6 +2131,9 @@ form{
   justify-content: center;
   align-items: center;
 }
+.token-srs-description {
+  min-height: 220px;
+}
 .conditions{
   color: white;
   /*font-family: "Myriad Pro";*/
