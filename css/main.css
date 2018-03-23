@@ -2605,7 +2605,7 @@ footer .logo{
   background-color: rgba(0,0,0,0.5);
   overflow:hidden;
   position:fixed;
-  top: 0px;
+  top: 30px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content:center;
