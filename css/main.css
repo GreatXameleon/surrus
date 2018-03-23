@@ -2572,12 +2572,14 @@ form{
    font-weight: 600;
    text-transform: uppercase;
    margin: 20px 0;
+   min-width: 320px;
  }
 .follow{
   color: rgba(255, 255, 255, 0.6);
   /*font-family: Montserrat;*/
   font-size: 12px;
   font-weight: 400;
+  white-space: nowrap;
 }
 input[type="email"]{
   width: 298px;
