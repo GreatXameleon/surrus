@@ -692,7 +692,7 @@ form{
   margin-bottom: 20px;
 }
 .block2_left .text-part{
-  margin-left: 55px;
+  margin-left: 5px;
   margin-bottom: 20px;
 }
 .block2_left .proc{
@@ -3238,6 +3238,20 @@ a.main-website:hover {
   }
   .block2_left{
     padding-left: 0;
+    line-height: 28px;
+  }
+  .block2_left__about {
+    text-align: center;
+  }
+  .block2_left__about p {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .block2_left__about span {
+    font-size: 18px;
+  }
+  .block2_left__about span:first-child {
+    display: block;
   }
   .block14 .block-title{
     margin-bottom: 110px;
@@ -3264,7 +3278,7 @@ a.main-website:hover {
     margin-left: 20px;
   }
   .block2_left .text-part{
-    margin-left: 20px;
+    margin-left: 25px;
   }
   .block2_left .proc{
     width: 90%;
