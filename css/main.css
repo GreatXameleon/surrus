@@ -38,6 +38,7 @@
 
 body{
   background: linear-gradient(270deg, #963f80 0%, #21066a 100%), #020536;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
