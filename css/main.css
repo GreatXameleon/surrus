@@ -599,6 +599,10 @@ form{
   display: inline-block;
   vertical-align: middle;
   margin: 0 15px;
+  transition: filter 0.2s ease-in-out;
+}
+.socials-list__item:hover {
+  filter: drop-shadow(0px 0px 7px rgba(207, 22, 253, 0.5));
 }
 .socials-list__item a {
   color: #551a8b;
@@ -3709,6 +3713,12 @@ a.main-website:hover {
   .demonstration-link{
     width: 90%;
   }
+  .block12__inBlock .title {
+    margin-bottom: 35px;
+  }
+  .block12__inBlock {
+    margin-top: 20px;
+  }
   .block12__inBlock-inner{
     width: 290px;
     height: auto;
@@ -3716,6 +3726,8 @@ a.main-website:hover {
   }
   .token-srs-description{
     width: 310px;
+    margin: 0;
+    margin-bottom: 40px;
   }
   .logo{
     width: 32%;
