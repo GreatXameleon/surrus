@@ -1248,8 +1248,8 @@ form{
 .block4__left img {
   /*max-width: 225px;*/
   float: left;
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   margin-left: 120px;
 }
 
@@ -3665,6 +3665,11 @@ a.main-website:hover {
   }
   .pink-link{
     width: 90%;
+  }
+
+  .block4__left img {
+    width: 100%;
+    transform: scale(0.8);
   }
 
   .block5__p{
