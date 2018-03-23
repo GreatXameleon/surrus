@@ -2957,6 +2957,9 @@ a.main-website:hover {
   }
 }
 @media screen and (max-width: 890px){
+  .block2_left {
+    width: 100%;
+  }
   .block2_right iframe {
     width: 320px;
     height: 240px;
