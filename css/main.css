@@ -27,7 +27,6 @@
   font-style: normal;
 }
 
-
 .header .container:before, .graphics:before, .advantages:before, .block4__body:before, .goals:before, .block12__line:before, .header .container:after, .graphics:after, .advantages:after, .block4__body:after, .goals:after, .block12__line:after {
   content: "";
   display: table;
@@ -109,7 +108,7 @@ form{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 99999;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
