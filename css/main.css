@@ -1916,8 +1916,12 @@ form{
   /*font-family: Montserrat;*/
   font-size: 24px;
   font-weight: 600;
-  line-height: 94px;
+  line-height: 87px;
+  white-space: nowrap;
   letter-spacing: 3px;
+}
+.block9-list .tab:last-child {
+  white-space: normal;
 }
 .block10 {
   background: url(../images/bg4a.jpg) center center no-repeat;
@@ -2806,6 +2810,7 @@ a.main-website:hover {
     transform: rotate(360deg);
   }
   .block9-list .tab:last-child{
+    margin-top: 40px;
     line-height: 24px;
   }
   .centr-bridge{
@@ -3027,6 +3032,9 @@ a.main-website:hover {
   .block9-list .tab {
     font-size: 20px;
     line-height: 32px;
+  }
+  .block9-list .tab:last-child{
+    margin-top: 0;
   }
   .block9{
     min-height: 480px;
@@ -3546,6 +3554,9 @@ a.main-website:hover {
   .block8 .block-title{
     font-size: 18px;
   }
+  .block9-list .tab:last-child{
+    line-height: 50px;
+  }
   .block10 .first{
     text-align: left;
     width: 82%;
@@ -3621,9 +3632,9 @@ a.main-website:hover {
   .block9-list .tab:first-child{
     border-top: 1px solid white;
   }
-  .block9-list .tab:last-child{
+  /* .block9-list .tab:last-child{
     line-height: 50px;
-  }
+  } */
   .block9 .container{
     padding-bottom: 20px;
   }
