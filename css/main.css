@@ -542,8 +542,10 @@ form{
   box-shadow: 0 0 21.8px 2.2px rgba(208, 42, 135, 0.3);
 }
 
-.colored-link.color1:hover {
+.colored-link.color1:hover,
+.pink-link:hover {
   background-color: #fb63ff;
+  box-shadow: 0 0 50px 2.2px rgba(208, 42, 135, 0.5);
 }
 
 .colored-link.color2 {
@@ -551,11 +553,23 @@ form{
   /*line-height: normal;*/
   /*padding-top: 4px;*/
   background-color: #2a70e8;
-  box-shadow: 0 0 21.8px 2.2px rgba(42, 112, 232, 0.25);
+  box-shadow: 0 0 21.8px 2.2px rgba(42, 112, 232, 0.3);
 }
 
-.colored-link.color2:hover {
+.colored-link.color2:hover,
+.submit-main:hover,
+.demonstration-link:hover {
   background-color: #1891e4;
+  box-shadow: 0 0 50px 2.2px rgba(42, 112, 232, 0.5);
+}
+
+.submit-main,
+.demonstration-link,
+.pink-link {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .colored-link.color3 {
@@ -767,14 +781,10 @@ form{
   height: 49px;
   background-color: #d02a87;
   border-radius: 21px;
-  box-shadow: 0 0 21.8px 2.2px rgba(208, 42, 135, 0.25);
+  box-shadow: 0 0 21.8px 2.2px rgba(208, 42, 135, 0.3);
   /*font-family: Montserrat;*/
   font-size: 14px;
 
-}
-
-.pink-link:hover {
-  background-color: rgba(142, 43, 149, 0.8);
 }
 
 .popup {
@@ -2533,6 +2543,8 @@ form{
   height: 173px;
   background-color: rgba(37,8, 91, 0.4);
   border-radius: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .block17 form .submit-mobile {
   display: none;
