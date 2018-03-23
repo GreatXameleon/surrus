@@ -1919,9 +1919,6 @@ form{
   line-height: 94px;
   letter-spacing: 3px;
 }
-/* .block9-list .tab:last-child{
-  line-height: 24px;
-} */
 .block10 {
   background: url(../images/bg4a.jpg) center center no-repeat;
   background-size: cover;
@@ -2807,6 +2804,9 @@ a.main-website:hover {
   }
   .block7-list .clicked{
     transform: rotate(360deg);
+  }
+  .block9-list .tab:last-child{
+    line-height: 24px;
   }
   .centr-bridge{
     top: -30px;
