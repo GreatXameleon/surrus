@@ -3801,6 +3801,12 @@ a.main-website:hover {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .sum p:nth-child(2) {
+    margin-left: -5px;
+  }
+}
+
 /* @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 479px) {
   .block17 form .submit-mobile {
     display: block;
