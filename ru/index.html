@@ -1323,6 +1323,12 @@
 					<p class="action-bonus">Самые выгодные предложения и ход реализации проекта</p>
 					<p class="follow">Подпишитесь, и мы вышлем вам лучшие предложения</p>
 					<input type="email" name="email" placeholder="Ваш электронный адрес">
+					<input type="hidden" name="utm_source" value="">
+					<input type="hidden" name="utm_medium" value="">
+					<input type="hidden" name="utm_campaign" value="">
+					<input type="hidden" name="utm_content" value="">
+					<input type="hidden" name="utm_term" value="">
+					<input type="hidden" name="ref" value="">
 					<input class="submit-main" type="submit" value="Отправить">
 					<input class="submit-mobile" type="submit" value=">">
 				</form>
@@ -1396,6 +1402,12 @@
 			<input type="text" name="fio" placeholder="Введите имя" required>
 			<input type="text" name="sum" placeholder="Сумма инвестиций (в эфирах)" required>
 			<input type="email" name="email" placeholder="Введите Email " required>
+			<input type="hidden" name="utm_source" value="">
+			<input type="hidden" name="utm_medium" value="">
+			<input type="hidden" name="utm_campaign" value="">
+			<input type="hidden" name="utm_content" value="">
+			<input type="hidden" name="utm_term" value="">
+			<input type="hidden" name="ref" value="">
 			<div class="offert-condition">
 				<input type="checkbox" required>
 				<span class="agree">нажав на поле “Я принимаю эти условия”, вы соглашаетесь с нашими условиями продажи токенов, и вы прямо подтверждаете,
@@ -1513,6 +1525,13 @@
 			}
 		}
 
+		var getParam = function (name, uri) {
+			var result = decodeURIComponent(uri)
+				.split('&')
+				.filter(x => x.split("=")[0] === name)[0];
+			return result && result.split("=")[1];
+		}
+
 		if (document.location.search) {
 			cookies.setCookie("ref", document.location.search.slice(1), {
 				expires: 3600 * 24 * 7
@@ -1527,6 +1546,9 @@
 		if (ref) {
 			$(".login-link").attr("href", loginLink + "&" + ref);
 			$(".buy-token").attr("href", registerLink + "&" + ref);
+
+			var params = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref"];
+			params.forEach(x => $("input[name=" + x + "]").attr("value", getParam(x, ref)));
 		}
 	</script>
 

@@ -1323,6 +1323,12 @@
 					<p class="action-bonus">THE MOST PROFITABLE OFFERS AND PROGRESS OF THE REALIZATION OF THE PROJECT</p>
 					<p class="follow">Subscribe and we will send you the best offers</p>
 					<input type="email" name="email" placeholder="Enter your Email Address">
+					<input type="hidden" name="utm_source" value="">
+					<input type="hidden" name="utm_medium" value="">
+					<input type="hidden" name="utm_campaign" value="">
+					<input type="hidden" name="utm_content" value="">
+					<input type="hidden" name="utm_term" value="">
+					<input type="hidden" name="ref" value="">
 					<input class="submit-main" type="submit" value="Send">
 					<input class="submit-mobile" type="submit" value=">">
 				</form>
@@ -1397,6 +1403,12 @@
 			<input type="text" name="fio" placeholder="Our name" required>
 			<input type="text" name="sum" placeholder="Sum of investments" required>
 			<input type="email" name="email" placeholder="Enter your Email Address" required>
+			<input type="hidden" name="utm_source" value="">
+			<input type="hidden" name="utm_medium" value="">
+			<input type="hidden" name="utm_campaign" value="">
+			<input type="hidden" name="utm_content" value="">
+			<input type="hidden" name="utm_term" value="">
+			<input type="hidden" name="ref" value="">
 			<div class="offert-condition">
 				<input type="checkbox" required>
 				<span class="agree">By clicking on the “I accept these Terms and Condition” box, you agree to our Token Sale Terms and you explicitly confirm
@@ -1522,6 +1534,13 @@
 			}
 		}
 
+		var getParam = function (name, uri) {
+			var result = decodeURIComponent(uri)
+				.split('&')
+				.filter(x => x.split("=")[0] === name)[0];
+			return result && result.split("=")[1];
+		}
+
 		if (document.location.search) {
 			cookies.setCookie("ref", document.location.search.slice(1), {
 				expires: 3600 * 24 * 7
@@ -1536,6 +1555,9 @@
 		if (ref) {
 			$(".login-link").attr("href", loginLink + "&" + ref);
 			$(".buy-token").attr("href", registerLink + "&" + ref);
+
+			var params = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref"];
+			params.forEach(x => $("input[name=" + x + "]").attr("value", getParam(x, ref)));
 		}
 	</script>
 
