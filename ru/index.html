@@ -59,6 +59,9 @@
 				<li>
 					<a href="http://app.surrus.io/?login" class="login-link">Войти</a>
 				</li>
+				<li>
+					<a href="http://app.surrus.io/?register" class="register-link">Зарегистрироваться</a>
+				</li>
 			</ul>
 			<div class="header__right">
 				<a href="https://t.me/surrus_ICO_ru" class="telegram" target="_blank"></a>
@@ -1546,6 +1549,7 @@
 		if (ref) {
 			$(".login-link").attr("href", loginLink + "&" + ref);
 			$(".buy-token").attr("href", registerLink + "&" + ref);
+			$(".register-link").attr("href", registerLink + "&" + ref);
 
 			var params = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "ref"];
 			params.forEach(x => $("input[name=" + x + "]").attr("value", getParam(x, ref)));

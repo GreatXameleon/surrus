@@ -280,7 +280,8 @@ form{
   opacity: 1;
 }
 
-.login-link {
+.login-link,
+.register-link {
   width: 141px;
   height: 42px;
   border: 1.5px solid #d02a87;
@@ -293,7 +294,8 @@ form{
   color: #fff;
 
 }
-.login-link:hover {
+.login-link:hover,
+.register-link:hover {
   background-color: transparent;
   border: 1px solid #fff;
   margin-right: 25px;
@@ -1840,7 +1842,7 @@ form{
   -webkit-flex-direction: column;
   flex-direction: column;
   -webkit-justify-content: center;
-  justify-content: center;
+  justify-content: baseline;
   color: #5a5a5a;
   font-size: 13px;
   /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);*/
@@ -3179,11 +3181,17 @@ a.main-website:hover {
     color: #d02a87;
     font-size: 20px;
   }
-  .login-link{
+  .login-link,
+  .register-link{
     width: 280px;
   }
-  .header__menu .login-link{
+  .header__menu .login-link {
     margin: 40px 0;
+    display: inline-flex;
+  }
+  .header__menu .register-link {
+    margin: 0;
+    margin-top: -10px;
     display: inline-flex;
   }
    .header__right .login-link-desktop{
@@ -3804,6 +3812,9 @@ a.main-website:hover {
 @media screen and (max-width: 350px) {
   .sum p:nth-child(2) {
     margin-left: -5px;
+  }
+  .block17 form .submit-mobile {
+    right: 50px;
   }
 }
 
