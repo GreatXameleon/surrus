@@ -593,7 +593,7 @@ form{
 .socials{
   position: relative;
   bottom: 100px;
-  max-width: 350px;
+  max-width: 450px;
 }
 .socials-list {
   font-size: 0;
@@ -621,9 +621,16 @@ form{
   filter: drop-shadow(0px 0px 7px rgba(207, 22, 253, 0.5));
 }
 .socials-list__item a {
+  display: inline-block;
+  margin-bottom: 10px;
   color: #551a8b;
 }
-
+.socials-list__item .social-icon-mobile {
+  display: none;
+}
+.social-icon {
+  display: inline-block;
+}
 
 .mouse-link {
   display: block;
@@ -2845,6 +2852,9 @@ a.main-website:hover {
   .block1_right h3{
     font-size: 28px;
   }
+  .socials {
+    max-width: 250px;
+  }
 }
 
 @media screen and (max-width: 1320px){
@@ -3287,8 +3297,15 @@ a.main-website:hover {
     position: static;
     margin: 0 auto 15px;
   }
-  .socials-list__item a {
+  .socials-list__item a,
+  .social-icon {
     color: #13105d;
+  }
+  .socials-list__item .social-icon-mobile {
+    display: inline-block;
+  }
+  .socials-list__item .social-icon-desctop {
+    display: none;
   }
   .colored-link{
     letter-spacing: 1.7px;
