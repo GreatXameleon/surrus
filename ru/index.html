@@ -1553,7 +1553,8 @@
 
 		if (document.location.search) {
 			cookies.setCookie("ref", document.location.search.slice(1), {
-				expires: 3600 * 24 * 7
+				expires: 3600 * 24 * 7,
+				domain: ".surrus.io"
 			})
 		}
 
