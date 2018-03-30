@@ -3088,6 +3088,8 @@ a.main-website:hover {
   .block14-list__item {
     margin-bottom: 200px;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .block14-list2 .block14-list__item{
     margin-bottom: 140px;
@@ -3804,6 +3806,9 @@ a.main-website:hover {
     height: auto;
     padding: 20px 5px;
   }
+  .block14-list__item {
+    width: 97%;
+  }
   .token-srs-description{
     width: 310px;
     margin: 0;
@@ -3839,6 +3844,22 @@ a.main-website:hover {
 @media screen and (max-width: 350px) {
   .sum p:nth-child(2) {
     margin-left: -5px;
+  }
+  .block12a .title {
+    line-height: 34px;
+    padding-left: 15px;
+  }
+  .block12a .title:after {
+    padding-left: 15px;
+  }
+  .block12a__inBlock:nth-child(2) .title {
+    margin-left: -20px;
+  }
+  .block12__inBlock-inner {
+    margin-right: 10px;
+  }
+  .block12-srs .block12__inBlock-inner {
+    margin-right: 0px;
   }
   .block17 form .submit-mobile {
     right: 50px;
