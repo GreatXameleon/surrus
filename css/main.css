@@ -334,6 +334,10 @@ form{
   -webkit-justify-content: center;
   justify-content: center;
 }
+.block1 .colored-link.color2 {
+  position: relative;
+  left: 12px;
+}
 .block-title, .title{
   position: relative;
 }
@@ -1532,13 +1536,16 @@ form{
   margin: 0 5px;
   position: relative;
 }
-.block_with_icon-list .goals__item:nth-child(2) .icon-goal{
+.block5 .goals__block:nth-child(1) .goals__item:nth-child(1) .icon-goal{
+  background: url("../images/goal1.png");
+}
+.block5 .goals__block:nth-child(1) .goals__item:nth-child(2) .icon-goal{
   background: url("../images/goal2.png");
 }
-.block5 .goals__block:nth-child(2) .icon-goal{
+.block5 .goals__block:nth-child(2) .goals__item:nth-child(1) .icon-goal{
   background: url("../images/goal3.png");
 }
-.block5 .goals__block:nth-child(2).goals__item:nth-child(2) .icon-goal{
+.block5 .goals__block:nth-child(2) .goals__item:nth-child(2) .icon-goal{
   background: url("../images/goal4.png");
 }
 .goals-item__wrap {
@@ -2298,7 +2305,7 @@ form{
 .block13 .goals__block:nth-child(2) .icon-goal{
   background: url("../images/our-client3.png");
 }
-.block13 .goals__block:nth-child(2).goals__item:nth-child(2) .icon-goal{
+.block13 .goals__block:nth-child(2) .goals__item:nth-child(2) .icon-goal{
   background: url("../images/our-client4.png");
 }
 .block13-list__item .sprite {
@@ -3009,6 +3016,9 @@ a.main-website:hover {
   }
 }
 @media screen and (max-width: 890px){
+  .block1 .colored-link.color2 {
+    position: static;
+  }
   .block2_left {
     width: 100%;
   }
