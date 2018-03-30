@@ -1774,6 +1774,15 @@ form{
 .blockchain img{
   margin-top: 29px;
 }
+.block8__item:nth-child(2) .blockchain img {
+  margin-top: 39px;
+}
+.block8__item:nth-child(4) .blockchain img {
+  margin-top: 32px;
+}
+.block8__item:nth-child(5) .blockchain img {
+  margin-top: 40px;
+}
 
 
 .block8 {
@@ -3647,6 +3656,16 @@ a.main-website:hover {
   }
   .blockchain img {
     margin-top: 50px;
+  }
+  .block8__item:nth-child(2) .blockchain img {
+    margin-top: 60px;
+  }
+  .block8__item:nth-child(4) .blockchain img {
+    margin-top: 52px;
+    margin-left: -2px;
+  }
+  .block8__item:nth-child(5) .blockchain img {
+    margin-top: 60px;
   }
   .block8__item{
     width: 100%;
