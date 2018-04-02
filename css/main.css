@@ -2991,6 +2991,13 @@ a.main-website:hover {
     padding-bottom: 0px;
   }
 
+  .block2_left .block-title{
+    margin-left: 0;
+  }
+  .block2_left .block2_left__about{
+    margin-left: 3%;
+  }
+
   .block1 .ellipse1 {
     width: 19vw;
     height: 19vw;
@@ -3604,8 +3611,12 @@ a.main-website:hover {
   }
   .about-proect,  .block2_left p{
     margin: 0 20px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 0;
+  }
+  .about-proect span {
+    font-size: 18px;
   }
   .block2_left .condition-part{
     margin-left: 20px;
