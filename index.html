@@ -19,6 +19,24 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Montserrat.css">
 	<link rel="stylesheet" href="fontawesome/css/fontawesome-all.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+			<!-- Global site tag (gtag.js) - Google AdWords: 812655702 --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-812655702"></script> 
+<script> 
+  window.dataLayer = window.dataLayer || []; 
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date()); 
+ 
+  gtag('config', 'AW-812655702'); 
+</script>
+<!--  Global site tag (gtag.js) - AdWords: 811794616 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-811794616"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-811794616');
+</script>
 	<title>SurruS</title>
 </head>
 
@@ -1343,7 +1361,7 @@
 			</div>
 			<div class="block-link">
 				<a href="https://app.surrus.io/?register" class="colored-link color1 buy-token">Buy tokens</a>
-				<form action="follow.php" method="post">
+				<form action="follow.php" class="subscribe" method="post">
 					<p class="action-bonus">THE MOST PROFITABLE OFFERS AND PROGRESS OF THE REALIZATION OF THE PROJECT</p>
 					<p class="follow">Subscribe and we will send you the best offers</p>
 					<input type="email" name="email" placeholder="Enter your Email Address">
@@ -1353,6 +1371,7 @@
 					<input type="hidden" name="utm_content" value="">
 					<input type="hidden" name="utm_term" value="">
 					<input type="hidden" name="ref" value="">
+					<input type="hidden" name="Gcid" id="Gcid"/>
 					<input class="submit-main" type="submit" value="Send">
 					<input class="submit-mobile" type="submit" value=">">
 				</form>
@@ -1421,7 +1440,7 @@
 		</form>
 	</div>
 	<div class="wrapper-popup popup3">
-		<form action="form.php" method="post" class="login follow-form">
+		<form action="form.php" method="post" class="login follow-form subscribe">
 			<i class="fas fa-times"></i>
 			<span>order demonstration</span>
 			<input type="text" name="fio" placeholder="Our name" required>
@@ -1433,6 +1452,7 @@
 			<input type="hidden" name="utm_content" value="">
 			<input type="hidden" name="utm_term" value="">
 			<input type="hidden" name="ref" value="">
+			<input type="hidden" name="Gcid" id="Gcid"/>
 			<div class="offert-condition">
 				<input type="checkbox" required>
 				<span class="agree">By clicking on the “I accept these Terms and Condition” box, you agree to our Token Sale Terms and you explicitly confirm
@@ -1586,7 +1606,13 @@
 			params.forEach(x => $("input[name=" + x + "]").attr("value", getParam(x, ref)));
 		}
 	</script>
-
+<script>
+var GAcookie = document.cookie.match(/ga=(.+?);/);
+var CID = GAcookie[1];
+CID = CID.split(".");
+var Gcidobj=document.getElementById("Gcid");
+Gcidobj.value= CID[2]+"."+CID[3];
+</script>
 
 </body>
 
