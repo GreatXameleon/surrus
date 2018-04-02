@@ -658,6 +658,13 @@ form{
   margin-bottom: 70px;
 }
 
+.block1__links .colored-link {
+  width: 280px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 30px;
+}
+
 .colored-link {
   display: -webkit-box;
   display: -webkit-flex;
