@@ -304,7 +304,7 @@ form{
 .telegram{
   width: 41px;
   height: 42px;
-  border: 1.5px solid #7832c6;
+  border: 1.5px solid #d02a87;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -479,13 +479,13 @@ form{
 .block1_left{
   color: white;
   margin-left: 8%;
-  font-size: 34px;
+  font-size: 30px;
   margin-bottom: 9%;
 }
 
 .decentrelization-system{
   text-transform: uppercase;
-  font-size: 34px;
+  font-size: 30px;
   letter-spacing: 3.7px;
   font-weight: 700;
   margin-top: 125px;
@@ -496,6 +496,7 @@ form{
 .description-decentrelization-system{
   letter-spacing: 3.7px;
   font-weight: 700;
+  padding-bottom: 15px;
 }
 .description-decentrelization-system span{
   color: #88b2ff;
@@ -852,13 +853,21 @@ form{
 }
 
 .block2_left .block-title{
-  margin-left: 35%;
+  margin-left: 25%;
+}
+.block2_left .block2_left__about{
+  margin-left: 15%;
 }
 .block2_left p{
+  font-size: 20px;
   margin-bottom: 0;
 }
+.about-proect {
+  font-size: 20px;
+  line-height: 32px;
+}
 .about-proect span{
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
 }
 .block2_left .condition-part{
@@ -2976,6 +2985,10 @@ a.main-website:hover {
 @media screen and (max-width: 1599px){
   .decentrelization-system{
     font-size: 24px;
+  }
+
+  .description-decentrelization-system{
+    padding-bottom: 0px;
   }
 
   .block1 .ellipse1 {
